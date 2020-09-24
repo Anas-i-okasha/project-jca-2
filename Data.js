@@ -41,3 +41,17 @@ const videos = [
     },
   ];
   
+  const main = $(`<div class = "first"></div>`)
+const body = $('body')
+body.append(main)
+
+videos.forEach(function(element){
+  
+const secD = $(`<div class="sec"> <img class="img" src = "${videos.thumbnail}"> <p>${videos.title} </p> </div>`)
+$('.img').click(function(){
+  
+$('.video').attr(`src`, `${videos.id}`)
+});
+main.append(secD)
+
+});
